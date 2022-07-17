@@ -1,166 +1,19 @@
-/* 모든 태그의 내외부 여백 공백 제거 */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0; 
 }
 
-/* list 앞 댕댕이 제거 */
-ul {
-  list-style: none;
+.picture {
+  background-color: green;
 }
 
-/* div를 1/5씩 위로 올리는 애니메이션 정의 */
-@keyframes rolling {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-20%);
-  }
-  50% {
-    transform: translateY(-40%);
-  }
-  75% {
-    transform: translateY(-60%);
-  }
-  100% {
-    transform: translateY(-80%);
-  }
+.picture img {
+  width: 550px;
+  height: 400px;
+  border-radius: 0px 100px 100px 0px;
 }
 
-.name span {  /* class='name' 속에 모든 span 태그의 css 지정 */
-  line-height: 1.5;
-  font-size: 2em;         /* 글자 크기 2배로 */
-  vertical-align: bottom; /* 아랫줄 정렬 */
-}
 
-.name-job {  
-  display: inline-block;  /* 위의 span 태그 우측에 위치하기 위하여 inline-block 속성으로 변경 */
-  vertical-align: top;    /* 윗줄 정렬 */
-  overflow: hidden;       /* 다섯개의 li 중 name-job 안에 위치한 li만 보이게 */
-  height: 1.5em;          /* div의 높이는 글자 크기의 1.5배로 */
-  font-size: 3em;
-  color: salmon;
-}
 
-.name p {
-  margin-left: 0.5em;
-}
-
-.name h1 {
-  font-size: 4em;
-}
-
-.name-job ul {
-  animation-name: rolling;  /* 위에서 정의한 rolling 애니메이션 적용 */
-  animation-duration: 5s;   /* rolling을 천천히 5초동안 수행 */
-  animation-iteration-count: infinite;  /* rolling을 계속 반복 */
-}
-
-.cover {
-  background-image: url('before.png'); /* cover div의 배경이미지 지정 */
-  padding-top: 56.25%;                /* 가로길이의 56.25% 비율을 세로페딩으로 지정 */
-  background-size: cover;             /* 배경이미지를 div의 크기에 맞게 조정 */
-  background-position: center;        /* 배경이미지의 가운데부분을 표시 */
-  transition: all 0.5s
-}
-
-/* cover 위에 마우스가 올라가면 */
-.cover:hover {
-  background-image: url('after.jpg'); /* conver div의 배경이미지 지정 */ 
-  max-width: 100%;
-  background-size: cover;             /* 배경이미지를 div의 크기에 맞게 조정 */
-  background-position: center;        /* 배경이미지의 가운데부분을 표시 */ 
-}
-
-.contents {
-  margin-left: 1em;
-}
-
-.contents .title {
-  margin-top: 1em;
-  padding-bottom: 0.5em;
-  border-top: solid 0.2em orangered; /* 일반선, 굵기, 색상 */
-  color: orangered;
-  font-size: 2em;
-  font-weight: 600; /* 폰트 굵기 */
-}
-
-.history {
-  margin-bottom: 1em;
-}
-
-.history .subtitle {
-  float: left;      /* 오렌지색 글자를 class='content' 내부에서 왼쪽에 둥둥 띄워라 */
-  font-weight: 600; /* 폰트 굵기 */
-  color: orange;
-  margin: 0 0.5em;  /* 상하, 좌우 */
-}
-
-.history .content p {
-  margin-bottom: 0.5em;
-  margin-left: 0.5em;
-}
-
-.skill .content {
-  padding: 0.5em 0.5em;
-  margin-left: 0.5em;
-  margin-bottom: 1em;
-  height: 2.5em;
-  background: linear-gradient(45deg, black, skyblue);  /* 배경색을 그라디언트로? */
-  color: white;
-  border-radius: 0.5em; /* 모서리를 둥글게 */
-  box-sizing: border-box; /* div의 margin, padding 등을 고려하여 width를 정확하게 */
-}
-
-.contect dt {
-  float: left;
-  color: orange;
-  font-weight: 600;
-  width: 4em;
-  margin-left: 0.5em;
-}
-
-.contect dd {
-  line-height: 1.5em;
-}
-
-/* #css {
-  width: 30%;
-} */
-
-/* 요소 내 속성 값 이용(위와 같이 하드코딩 해도 됨) */
-.skill .content[percent='0%'] { width: 0%; }
-.skill .content[percent='10%'] { width: 10%; }
-.skill .content[percent='20%'] { width: 20%; }
-.skill .content[percent='30%'] { width: 30%; }
-.skill .content[percent='40%'] { width: 40%; }
-.skill .content[percent='50%'] { width: 50%; }
-.skill .content[percent='60%'] { width: 60%; }
-.skill .content[percent='70%'] { width: 70%; }
-.skill .content[percent='80%'] { width: 80%; }
-.skill .content[percent='90%'] { width: 90%; }
-.skill .content[percent='100%'] { width: 100%; }
-
-/* 가상요소 활용(굳이 몰라도 됨) */
-.skill .content::after {
-  content: attr(percent);
-  float: right;
-  color: black;
-}
-
-/* 페이지 가로 길이가 767px보다 커지면 아래의 css 적용 */
-@media (min-width:768px) {
-  .cover {
-    width: 60vw;  /* 페이지의 가로 60% 사용 */
-    padding-top: 100vh; /* 페이지의 세로 100% 사용 */
-    position: fixed;  /* 스크롤 내려도 안움직임 */
-    background-image: cover;  /* div의 크기에 맞기 사진크기 변경 */
-    background-position: center;  /* 사진의 가운데부분 표시 */
-  }
-
-  .contents {
-    margin-left: 62vw;
-    padding-top: 5vh;
-  }
-}
+--.box1 {  float:left; width:200px; height:100px; background-color:#234234;}
+--.box2 {  display:inline-block; width:200px; height:100px; background-color:#666666; margin-left:10px;}  </style>
