@@ -13,7 +13,15 @@
   border-radius: 0px 100px 100px 0px;
 }
 
+.high-li {
+  font-size: 30px;
+  font: bold;
+}
 
+#big-job {
+  font-size: 22px;
+}
 
---.box1 {  float:left; width:200px; height:100px; background-color:#234234;}
---.box2 {  display:inline-block; width:200px; height:100px; background-color:#666666; margin-left:10px;}  </style>
+li {
+  font-size: 18px;
+}
