@@ -1,11 +1,17 @@
 
-
-.picture {
-  background-color: green;
+#header {
+  display: flex;
+  flex-direction: row;
+  background: beige;
 }
 
 .picture img {
+  width: 44vh;
   border-radius: 0px 100px 100px 0px;
+}
+
+.textspace {
+  
 }
 
 .high-li {
@@ -16,14 +22,38 @@
 #big-job {
   font-size: 130%;
   font: bold;
-  margin-left: -2%;
+  margin-left: -10%;
   line-height: 0px;
 }
 
 li {
-  font-size: 100%`;
+  font-size: 100%;
 }
 
-.test {
-  background: blue
+#pic-category-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+#pic-category1 {
+  background: pink;
+  width: 33vw;
+  height: 4vh;
+  text-align: center;
+}
+
+#pic-category2 {
+  background: silver;
+  width: 33vw;
+  height: 4vh;
+  text-align: center;
+}
+
+#pic-category3 {
+  background: #6ad670;
+  width: 33vw;
+  height: 4vh;
+  text-align: center;
+}
+
