@@ -1,0 +1,18 @@
+id-list
+    header
+    list-top
+    big-job
+    border-between-header-and-main
+    pic-category-block
+    pic-category1
+    pic-category2
+    pic-category3
+    pic-content
+    work
+
+class-list
+    picture
+    textspace
+    list-item
+    high-li
+    

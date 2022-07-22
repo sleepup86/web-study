@@ -3,24 +3,29 @@
   display: flex;
   flex-direction: row;
   background: beige;
+  flex-wrap: wrap;
 }
 
 .picture img {
-  width: 44vh;
+  width:  60vw;
   border-radius: 0px 100px 100px 0px;
 }
 
+.textspace {
+  /* vertical-align: center; */
+}
 
+#list {
+  vertical-align: center;
+}
 
 .high-li {
   font-size: 160%;
-  font: bold;
 }
 
 #big-job {
-  font-size: 130%;
-  font: bold;
-  margin-left: -10%;
+  font-size: 110%;
+  margin-left: -9%;
   line-height: 0px;
 }
 
