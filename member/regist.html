@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regist Member</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" type="text/javascript"></script>
+  <script type="text/javascript">
+   
+  </script>
+</head>
+<body onload="initRegistPage()">
+  <a href="member.html">Move to Member</a>
+  <form id="regist-form">
+    <div>
+      <label for="first-name">성</label>
+      <input type="text" name="firstName" id="first-name" placeholder="성(姓)" required autofocus>
+    </div>
+    <div>
+      <label for="last-name">이름</label>
+      <input type="text" name="lastName" id="last-name" placeholder="이름(성은 제외)" required>
+    </div>
+    <div>
+      <label for="team">소속부서</label>
+      <input type="text" name="team" id="team" placeholder="부서명(본부명 제외)" required>
+    </div>
+    <div>
+      <label for="avatar">사진파일명</label>
+      <input type="text" id="avatar" name="avatar" placeholder="'/images' 폴더 내에 복사한 이미지 파일 명(예시: avatar.jpeg)" required>
+    </div>
+    <button type="submit">등록</button>
+  </form>    
+</body>
+</html>
